@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Navbar } from "@/components/navbar";
 import { translations } from "@/lib/translations";
-import { metadata } from "@/lib/metadata"; 
 
 
 
