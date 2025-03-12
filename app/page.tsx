@@ -1,7 +1,3 @@
-export const metadata = {
-  title: "Mohammad Kalateh | Web Designer & SEO Expert",
-  description: "I'm Mohammad Kalateh, a web designer and SEO expert. I help businesses grow and get noticed online.",
-};
 "use client";
 
 import { useState, useEffect } from "react";
@@ -11,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Navbar } from "@/components/navbar";
 import { translations } from "@/lib/translations";
+import { metadata } from "@/lib/metadata"; 
 
 
 
@@ -123,6 +120,8 @@ export default function Home() {
   }, [language]);
 
   const t = translations[language];
+
+
 
   return (
     <main className={`min-h-screen bg-background ${language === 'fa' ? 'rtl' : 'ltr'}`}>
