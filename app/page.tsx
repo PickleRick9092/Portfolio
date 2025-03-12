@@ -157,7 +157,7 @@ export default function Home() {
             className="relative aspect-square rounded-full overflow-hidden border-4 border-primary/20"
           >
             <img
-              src="/images/Mainpic.jpg"
+              src="/images/Mainpic.avif"
               alt={t.hero.title}
               className="w-full h-full object-cover image-hover"
             />
