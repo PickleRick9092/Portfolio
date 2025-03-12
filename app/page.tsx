@@ -8,6 +8,11 @@ import { Card } from "@/components/ui/card";
 import { Navbar } from "@/components/navbar";
 import { translations } from "@/lib/translations";
 
+export const metadata = {
+  title: "Mohammad Kalateh | Web Designer & SEO Expert",
+  description: "I'm Mohammad Kalateh, a web designer and SEO expert. I help businesses grow and get noticed online.",
+};
+
 const skills = [
   {
     name: "Web Design",
