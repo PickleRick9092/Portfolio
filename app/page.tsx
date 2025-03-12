@@ -157,7 +157,7 @@ export default function Home() {
             className="relative aspect-square rounded-full overflow-hidden border-4 border-primary/20"
           >
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+              src="/images/Mainpic.jpg"
               alt={t.hero.title}
               className="w-full h-full object-cover image-hover"
             />
