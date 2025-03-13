@@ -10,6 +10,7 @@ import { translations } from "@/lib/translations";
 
 
 
+
 const skills = [
   {
     name: "Web Design",
@@ -43,44 +44,7 @@ const skills = [
   },
 ];
 
-const projects = [
-  {
-    title: "Mehrdad Shop - E-commerce Store for Car Audio & Visual Accessories",
-    description: "A WordPress-based e-commerce site for selling car audio and visual accessories.",
-    image: "https://github.com/PickleRick9092/Site/blob/main/11.png?raw=true",
-    link: "https://mehrdadshop.com/",
-  },
-  {
-    title: "Nikan Persin - WordPress Immigration Consulting Website",
-    description: "A professional WordPress site for immigration consulting services",
-    image: "https://github.com/PickleRick9092/Site/blob/main/2.png?raw=true",
-    link: "https://nikanpersin.com/",
-  },
-  {
-    title: "Negargar Beauty - WordPress Salon & Beauty Services Website",
-    description: "A stylish WordPress site showcasing beauty salon services for women",
-    image: "https://github.com/PickleRick9092/Site/blob/main/23.png?raw=true",
-    link: "https://negargar-salon.ir/",
-  },
-  {
-    title: "StarCarAudio - Another WordPress E-commerce for Car Audio & Visual Accessories",
-    description: "An online store built with WordPress, offering a wide range of high-quality car audio and visual equipment",
-    image: "https://github.com/PickleRick9092/Site/blob/main/5.png?raw=true",
-    link: "https://starcaraudio.com/",
-  },
-  {
-    title: "Iran Media - WordPress Instagram Business Consulting Website",
-    description: "A WordPress site offering business consulting services for Instagram-based ventures",
-    image: "https://github.com/PickleRick9092/Site/blob/main/4.png?raw=true",
-    link: "https://iranmedia.agency/",
-  },
-  {
-    title: "Tahlildadeh Academy - Programming Academy Website",
-    description: "Worked as an SEO specialist for two years, optimizing the website of Data Analysis Academy to improve its rank",
-    image: "https://github.com/PickleRick9092/Site/blob/main/6.png?raw=true",
-    link: "https://www.tahlildadeh.com/",
-  },
-];
+
 
 const videos = [
   {
@@ -102,9 +66,9 @@ const videos = [
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
-  const [language, setLanguage] = useState<'en' | 'fa'>(() => {
+  const [language, setLanguage] = useState<'en' | 'it'>(() => {
     if (typeof window !== 'undefined') {
-      return (localStorage.getItem('language') as 'en' | 'fa') || 'en';
+      return (localStorage.getItem('language') as 'en' | 'it') || 'en';
     }
     return 'en';
   });
@@ -115,15 +79,15 @@ export default function Home() {
 
   useEffect(() => {
     localStorage.setItem('language', language);
-    document.documentElement.dir = language === 'fa' ? 'rtl' : 'ltr';
+    document.documentElement.dir = language === 'it' ? 'ltr' : 'ltr';
   }, [language]);
 
   const t = translations[language];
 
 
-
+  
   return (
-    <main className={`min-h-screen bg-background ${language === 'fa' ? 'rtl' : 'ltr'}`}>
+    <main className={`min-h-screen bg-background ${language === 'it' ? 'ltr' : 'ltr'}`}>
       <Navbar language={language} setLanguage={setLanguage} />
       
       {/* Hero Section */}
@@ -143,10 +107,10 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <Button variant="default" size="lg" className="btn-bounce">
-                <a href="#projects">View Projects</a>
+                <a href="#projects">{t.hero.cta.projects}</a>
               </Button>
               <Button variant="outline" size="lg" className="btn-bounce">
-                <a href="#contact">Contact Me</a>
+                <a href="#contact">{t.hero.cta.contact}</a>
               </Button>
             </div>
           </motion.div>
@@ -175,65 +139,72 @@ export default function Home() {
 
       {/* Skills Section */}
       <section id="skills" className="py-20 section-transition">
-        <div className="container px-4 mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">{t.sections.skills.title}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="p-6 rounded-lg bg-card card-hover"
-              >
-                <div className="text-4xl mb-4 transform transition-transform duration-300 hover:scale-110">{skill.icon}</div>
+  <div className="container px-4 mx-auto">
+    <h2 className="text-3xl font-bold text-center mb-12">{t.sections.skills.title}</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {t.skills.map((skill, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.2 }}
+          viewport={{ once: true }}
+          className="p-6 rounded-lg bg-card card-hover"
+        >
+                <div className="text-4xl mb-4 transform transition-transform duration-300 ">{skill.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
                 <p className="text-muted-foreground">{skill.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-muted/30 section-transition">
-        <div className="container px-4 mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">{t.sections.projects.title}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                viewport={{ once: true }}
+{/* Projects Section */}
+<section id="projects" className="py-20 bg-muted/30 section-transition">
+  <div className="container px-4 mx-auto">
+    <h2 className="text-3xl font-bold text-center mb-12">{t.sections.projects.title}</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {t.projects.map((project, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.2 }}
+          viewport={{ once: true }}
+        >
+          <Card className="overflow-hidden group card-hover">
+            <div className="relative aspect-video overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+              <p className="text-muted-foreground mb-4">{project.description}</p>
+              <a
+                href={project.link}
+                className="inline-flex items-center text-primary hover:text-primary/80 link-hover"
+                target="_blank" rel="noopener"
               >
-                <Card className="overflow-hidden group card-hover">
-                  <div className="relative aspect-video overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-muted-foreground mb-4">{project.description}</p>
-                    <a
-                      href={project.link}
-                      className="inline-flex items-center text-primary hover:text-primary/80 link-hover"
-                      target="_blank" rel="noopener"
-                    >
-                      {t.sections.projects.viewProject} <ExternalLink className="ml-2 w-4 h-4" />
-                    </a>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                {t.sections.projects.viewProject} <ExternalLink className="ml-2 w-4 h-4" />
+              </a>
+            </div>
+          </Card>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
 
       {/* Video Section */}

@@ -6,13 +6,13 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { translations } from "@/lib/translations";
 
-export function Navbar({ language, setLanguage }: { language: 'en' | 'fa', setLanguage: (lang: 'en' | 'fa') => void }) {
+export function Navbar({ language, setLanguage }: { language: 'en' | 'it', setLanguage: (lang: 'en' | 'it') => void }) {
   const { theme, setTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = translations[language];
 
   return (
-    <nav className={`fixed w-full z-50 top-0 left-0 backdrop-blur-md bg-white/75 dark:bg-black/75 border-b border-border ${language === 'fa' ? 'rtl' : 'ltr'}`}>
+    <nav className={`fixed w-full z-50 top-0 left-0 backdrop-blur-md bg-white/75 dark:bg-black/75 border-b border-border ${language === 'it' ? 'ltr' : 'ltr'}`}>
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <a href="#" className="text-xl font-bold hover:text-primary transition-colors">{t.hero.title}</a>
@@ -39,10 +39,11 @@ export function Navbar({ language, setLanguage }: { language: 'en' | 'fa', setLa
               variant="ghost"
               size="icon"
               className="btn-bounce"
-              onClick={() => setLanguage(language === 'en' ? 'fa' : 'en')}
+              onClick={() => setLanguage(language === 'en' ? 'it' : 'en')}
             >
               <Languages className="h-5 w-5" />
             </Button>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -61,7 +62,7 @@ export function Navbar({ language, setLanguage }: { language: 'en' | 'fa', setLa
               variant="ghost"
               size="icon"
               className="btn-bounce"
-              onClick={() => setLanguage(language === 'en' ? 'fa' : 'en')}
+              onClick={() => setLanguage(language === 'en' ? 'it' : 'en')}
             >
               <Languages className="h-5 w-5" />
             </Button>
