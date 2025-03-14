@@ -244,19 +244,19 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12">{t.sections.contact.title}</h2>
           <div className="flex justify-center gap-6">
             <a href="https://github.com/PickleRick9092" className="text-muted-foreground hover:text-primary social-hover">
-              <Github className="w-8 h-8" />
+              <Github className="w-8 h-8 " />
             </a>
             <a href="https://www.linkedin.com/in/mohammad-kalateh-46b65a239/" className="text-muted-foreground hover:text-primary social-hover">
-              <Linkedin className="w-8 h-8" />
+              <Linkedin className="w-8 h-8 text-sky-700" />
             </a>
             <a href="mailto:mr.math9092@gmail.com" className="text-muted-foreground hover:text-primary social-hover">
-              <Mail className="w-8 h-8" />
+              <Mail className="w-8 h-8 text-rose-600" />
             </a>
             <a href="https://wa.me/989123903257" className="text-muted-foreground hover:text-primary social-hover">
-              <MessageCircle className="w-8 h-8" />
+              <MessageCircle className="w-8 h-8 text-emerald-500" />
             </a>
             <a href="https://t.me/Mohammad9092" className="text-muted-foreground hover:text-primary social-hover">
-              <Send className="w-8 h-8" />
+              <Send className="w-8 h-8 text-sky-600" />
             </a>
           </div>
         </div>
