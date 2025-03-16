@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Mohammad Kalateh | Web Designer & SEO Expert',
-  description: 'I am Mohammad Kalateh, a web designer and SEO expert. I help businesses grow and get noticed online',
+  description: 'I am Mohammad Kalateh 😊, a Web Designer & SEO Expert 🚀. I help businesses grow and get noticed online 🌐 through stunning websites and smart SEO strategies',
 };
 
 export default function RootLayout({
