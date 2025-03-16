@@ -205,38 +205,46 @@ export default function Home() {
   </div>
 </section>
 
+{/* Video Section */}
+<section id="videos" className="py-20 bg-muted/30 section-transition relative">
+  <div className="container px-4 mx-auto">
+    <h2 className="text-3xl font-bold text-center mb-12">{t.sections.videos.title}</h2>
 
+    {/* باکس شیشه‌ای روی ویدیوها */}
+    <div className="relative">
+    <div className="absolute inset-0 flex items-center justify-center bg-white/5 backdrop-blur-md rounded-lg z-10">
+    <span className="text-4xl font-bold text-white">Coming Soon 😉</span>
+      </div>
 
-      {/* Video Section */}
-      <section id="videos" className="py-20 bg-muted/30 section-transition">
-        <div className="container px-4 mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">{t.sections.videos.title}</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {videos.map((video, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="space-y-4"
-              >
-                <div className="aspect-video rounded-lg overflow-hidden card-hover">
-                  <iframe
-                    className="w-full h-full rounded-lg shadow-lg"
-                    src={`https://www.youtube.com/embed/${video.videoId}`}
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-                <h3 className="text-xl font-semibold">{video.title}</h3>
-                <p className="text-muted-foreground">{video.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ویدیوها */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-0">
+        {videos.map((video, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
+            className="space-y-4"
+          >
+            <div className="aspect-video rounded-lg overflow-hidden card-hover">
+              <iframe
+                className="w-full h-full rounded-lg shadow-lg"
+                src={`https://www.youtube.com/embed/${video.videoId}`}
+                title={video.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <h3 className="text-xl font-semibold">{video.title}</h3>
+            <p className="text-muted-foreground">{video.description}</p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-20 section-transition">
@@ -244,7 +252,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12">{t.sections.contact.title}</h2>
           <div className="flex justify-center gap-6">
             <a href="https://github.com/PickleRick9092" className="text-muted-foreground hover:text-primary social-hover">
-              <Github className="w-8 h-8 " />
+              <Github className="w-8 h-8 f" />
             </a>
             <a href="https://www.linkedin.com/in/mohammad-kalateh-46b65a239/" className="text-muted-foreground hover:text-primary social-hover">
               <Linkedin className="w-8 h-8 text-sky-700" />
