@@ -6,13 +6,13 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { translations } from "@/lib/translations";
 
-export function Navbar({ language, setLanguage }: { language: 'en' | 'it', setLanguage: (lang: 'en' | 'it') => void }) {
+export function Navbar({ language, setLanguage }: { language: 'en' | 'fa' | 'it', setLanguage: (lang: 'en' | 'fa' | 'it') => void }) {
   const { theme, setTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = translations[language];
 
   return (
-    <nav className={`fixed w-full z-50 top-0 left-0 backdrop-blur-md bg-white/75 dark:bg-black/75 border-b border-border ${language === 'it' ? 'ltr' : 'ltr'}`}>
+    <nav className={`fixed w-full z-50 top-0 left-0 backdrop-blur-md bg-white/75 dark:bg-black/75 border-b border-border ${language === 'fa' ? 'rtl' : 'ltr'}`}>
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <a href="#" className="text-xl font-bold hover:text-primary transition-colors">{t.hero.title}</a>
@@ -36,14 +36,22 @@ export function Navbar({ language, setLanguage }: { language: 'en' | 'it', setLa
             </Button>
 
             <Button
-              variant="ghost"
-              size="icon"
-              className="btn-bounce"
-              onClick={() => setLanguage(language === 'en' ? 'it' : 'en')}
-            >
-              <Languages className="h-5 w-5 text-amber-600 dark:text-amber-400" />
-              
-            </Button>
+  variant="ghost"
+  size="icon"
+  className="btn-bounce"
+  onClick={() => {
+    if (language === 'en') {
+      setLanguage('fa');  // تغییر به فارسی
+    } else if (language === 'fa') {
+      setLanguage('it');  // تغییر به ایتالیایی
+    } else {
+      setLanguage('en');  // تغییر به انگلیسی
+    }
+  }}
+>
+  <Languages className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+</Button>
+
 
           </div>
 
@@ -63,8 +71,17 @@ export function Navbar({ language, setLanguage }: { language: 'en' | 'it', setLa
               variant="ghost"
               size="icon"
               className="btn-bounce"
-              onClick={() => setLanguage(language === 'en' ? 'it' : 'en')}
+              onClick={() => {
+                if (language === 'en') {
+                  setLanguage('fa');  // تغییر به فارسی
+                } else if (language === 'fa') {
+                  setLanguage('it');  // تغییر به ایتالیایی
+                } else {
+                  setLanguage('en');  // تغییر به انگلیسی
+                }
+              }}
             >
+          
               <Languages className="h-5 w-5 text-amber-600 dark:text-amber-400" />
             </Button>
 

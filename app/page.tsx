@@ -8,44 +8,6 @@ import { Card } from "@/components/ui/card";
 import { Navbar } from "@/components/navbar";
 import { translations } from "@/lib/translations";
 
-
-
-
-const skills = [
-  {
-    name: "Web Design",
-    description: "Designing visually appealing and user-friendly websites with a focus on aesthetics",
-    icon: "🎨",
-  },
-  {
-    name: "SEO Strategy",
-    description: "Developing effective SEO strategies to boost website ranking and visibility",
-    icon: "🎯",
-  },
-  {
-    name: "Content Creation",
-    description: "Crafting engaging and optimized content to drive traffic and conversions",
-    icon: "📃",
-  },
-  {
-    name: "E-Commerce Development",
-    description: "Building robust, user-friendly online stores that enhance customer experience",
-    icon: "🛒",
-  },
-  {
-    name: "Performance Optimization",
-    description: "Enhancing website speed and performance for seamless user interactions",
-    icon: "📈",
-  },
-  {
-    name: "Technical SEO",
-    description: "Implementing technical SEO practices to ensure website health and search engine compatibility",
-    icon: "⚙️",
-  },
-];
-
-
-
 const videos = [
   {
     title: "Web Development Best Practices",
@@ -66,9 +28,9 @@ const videos = [
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
-  const [language, setLanguage] = useState<'en' | 'it'>(() => {
+  const [language, setLanguage] = useState<'en' | 'fa' | 'it'>(() => {
     if (typeof window !== 'undefined') {
-      return (localStorage.getItem('language') as 'en' | 'it') || 'en';
+      return (localStorage.getItem('language') as 'en' | 'fa' | 'it') || 'en';
     }
     return 'en';
   });
@@ -79,7 +41,7 @@ export default function Home() {
 
   useEffect(() => {
     localStorage.setItem('language', language);
-    document.documentElement.dir = language === 'it' ? 'ltr' : 'ltr';
+    document.documentElement.dir = language === 'fa' ? 'rtl' : 'ltr';
   }, [language]);
 
   const t = translations[language];
@@ -87,7 +49,7 @@ export default function Home() {
 
   
   return (
-    <main className={`min-h-screen bg-background ${language === 'it' ? 'ltr' : 'ltr'}`}>
+    <main className={`min-h-screen bg-background ${language === 'fa' ? 'rtl' : 'ltr'}`}>
       <Navbar language={language} setLanguage={setLanguage} />
       
       {/* Hero Section */}
@@ -99,18 +61,21 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="space-y-6 text-center md:text-left"
           >
-            <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+            <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 name-align">
               {t.hero.title}
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
-              {t.hero.subtitle}
-            </p>
-            <div className="flex flex-wrap justify-center md:justify-start gap-4">
-              <Button variant="default" size="lg" className="btn-bounce">
-                <a href="#projects">{t.hero.cta.projects}</a>
+            <p className="hero-sub text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed sm:leading-snug">
+  {t.hero.subtitle}
+</p>
+
+
+
+            <div className="flex flex-wrap justify-center md:justify-start gap-4  center-items">
+              <Button variant="default" size="lg" className="btn-bounce ">
+                <a href="#projects" className="cta-text">{t.hero.cta.projects}</a>
               </Button>
-              <Button variant="outline" size="lg" className="btn-bounce">
-                <a href="#contact">{t.hero.cta.contact}</a>
+              <Button variant="default" size="lg" className="btn-bounce ">
+                <a href="#contact" className="cta-text">{t.hero.cta.contact}</a>
               </Button>
             </div>
           </motion.div>
@@ -153,7 +118,7 @@ export default function Home() {
         >
                 <div className="text-4xl mb-4 transform transition-transform duration-300 ">{skill.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-                <p className="text-muted-foreground">{skill.description}</p>
+                <p className="text-muted-foreground text-redecor">{skill.description}</p>
         </motion.div>
       ))}
     </div>
@@ -189,7 +154,7 @@ export default function Home() {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-muted-foreground mb-4">{project.description}</p>
+              <p className="text-muted-foreground mb-4 project-text">{project.description}</p>
               <a
                 href={project.link}
                 className="inline-flex items-center text-primary hover:text-primary/80 link-hover"

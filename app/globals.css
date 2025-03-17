@@ -2,7 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Kalameh';
+  font-style: normal;
+  font-display:swap;
+  font-weight: 300;
+  src: url('/fonts/thin/KalamehWeb_thin.eot'),  url('/fonts/thin/KalamehWeb_thin.ttf'), url('/fonts/thin/KalamehWeb_thin.woff'), url('/fonts/thin/KalamehWeb_thin.woff2');
+}
+@font-face {
+  font-family: 'Kalameh';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/fonts/regular/KalamehWeb_Regular.eot'), url('/fonts/regular/KalamehWeb_Regular.ttf'), url('/fonts/regular/KalamehWeb_Regular.woff'), url('/fonts/regular/KalamehWeb_Regular.woff2');
+  }
+
+@font-face {
+  font-family: 'Kalameh';
+  font-style: normal;
+  font-display:swap;
+  font-weight: 700;
+  src: url('/fonts/bold/KalamehWeb_Bold.eot'), url('/fonts/bold/KalamehWeb_Bold.ttf'), url('/fonts/bold/KalamehWeb_Bold.woff'), url('/fonts/bold/KalamehWeb_Bold.woff2');
+}
+@font-face {
+  font-family: 'Kalameh';
+  font-style: normal;
+  font-display:swap;
+  font-weight: 900;
+  src: url('/fonts/black/KalamehWeb_Black.eot'), url('/fonts/black/KalamehWeb_Black.ttf'), url('/fonts/bold/KalamehWeb_Black.woff'), url('/fonts/bold/KalamehWeb_Black.woff2');
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -82,13 +111,59 @@
     @apply bg-background text-foreground scroll-smooth;
   }
 }
+.rtl .project-text{
+  font-family: 'Kalameh';
+  font-weight: 700;
+  font-size: 18px;
+  line-height:30px;
 
+}
+.rtl .text-redecor{
+  font-family: 'Kalameh';
+  font-weight: 700;
+  font-size: 22px;
+  line-height:30px;
+}
+.rtl .center-items {
+  justify-content: center !important;
+}
+.rtl .name-align {
+  text-align: center;
+}
+.rtl .hero-sub{
+  font-family: 'Kalameh';
+font-weight: 700;
+font-size: 25px;
+}
+.rtl .cta-text {
+  font-family: 'Kalameh';
+  font-weight: 700;
+  font-size: 20px;
+}
+.rtl nav {
+  font-family: 'Kalameh';
+  font-weight: 700;
+}
+.rtl h2{
+  font-family: 'Kalameh';
+font-weight: 700;
+font-size: 35px;
+}
+.rtl h3{
+  font-family: 'Kalameh';
+  font-weight: 700;
+  font-size: 25px;
+}
 /* RTL Support */
 .rtl {
   direction: rtl;
-  font-family: 'Vazirmatn', sans-serif;
-}
+  font-family: 'Kalameh', 'Lalezar', sans-serif ;
 
+}
+.rtl h1{
+font-family: 'Kalameh';
+font-weight: 700;
+}
 .ltr {
   direction: ltr;
   font-family: system-ui, -apple-system, sans-serif;
