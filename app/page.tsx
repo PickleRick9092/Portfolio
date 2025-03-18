@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ExternalLink, ChevronDown, MessageCircle, Send } from "lucide-react";
@@ -85,11 +85,15 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative aspect-square rounded-full overflow-hidden border-4 border-primary/20"
           >
-            <img
-              src="/images/Mainpic.avif"
-              alt={t.hero.title}
-              className="w-full h-full object-cover image-hover"
-            />
+            <Image
+  src="/images/Mainpic.avif"
+  alt={t.hero.title}
+  width={350} // عرض تصویر
+  height={350} // ارتفاع تصویر
+  priority={true} // برای لود سریع‌تر تصویر
+   className="w-full h-full object-cover image-hover"
+/>
+
           </motion.div>
         </div>
         <motion.div
