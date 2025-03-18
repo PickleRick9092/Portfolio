@@ -86,7 +86,7 @@ export default function Home() {
             className="relative aspect-square rounded-full overflow-hidden border-4 border-primary/20"
           >
             <Image
-  src="/images/Mainpic.avif"
+  src="/images/Main.webp"
   alt={t.hero.title}
   width={350} // عرض تصویر
   height={350} // ارتفاع تصویر
