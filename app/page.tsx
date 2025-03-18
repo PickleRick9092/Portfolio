@@ -91,7 +91,7 @@ export default function Home() {
   width={350} // عرض تصویر
   height={350} // ارتفاع تصویر
   priority={true} // برای لود سریع‌تر تصویر
-   className="w-full h-full object-cover image-hover"
+   className="w-full h-full object-cover "
 />
 
           </motion.div>
