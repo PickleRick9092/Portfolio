@@ -71,10 +71,10 @@ export default function Home() {
 
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4  center-items">
-              <Button variant="default" size="lg" className="btn-bounce ">
+              <Button variant="default" size="lg" className="btn-bounce min-w-11 min-h-11 px-4 py-2 bg-indigo-500 text-white rounded-lg shadow-md hover:bg-indigo-600 transition " aria-label="project section">
                 <a href="#projects" className="cta-text">{t.hero.cta.projects}</a>
               </Button>
-              <Button variant="default" size="lg" className="btn-bounce ">
+              <Button variant="default" size="lg" className="btn-bounce min-w-11 min-h-11 px-4 py-2 bg-indigo-500 text-white rounded-lg shadow-md hover:bg-indigo-600 transition " aria-label="contact section">
                 <a href="#contact" className="cta-text">{t.hero.cta.contact}</a>
               </Button>
             </div>
@@ -173,7 +173,7 @@ export default function Home() {
       ))}
     </div>
     <div className="flex justify-center">
-    <Button variant="default" size="lg" className="btn-bounce mt-10  p-4 rounded-lg">
+    <Button variant="default" size="lg" className="btn-bounce mt-10  p-4 rounded-lg" aria-label="view all projects">
                 <a href="/projects" className="cta-text">{t.sections.projects.viewallprojects}</a>
               </Button>
 </div>
@@ -189,7 +189,7 @@ export default function Home() {
     {/* باکس شیشه‌ای روی ویدیوها */}
     <div className="relative">
     <div className="absolute inset-0 flex items-center justify-center bg-white/5 backdrop-blur-md rounded-lg z-10">
-    <span className="text-4xl font-bold text-white">Coming Soon 😉</span>
+    <span className="text-4xl font-bold text-yellow-400">Coming Soon 😉</span>
       </div>
 
       {/* ویدیوها */}
@@ -206,7 +206,7 @@ export default function Home() {
             <div className="aspect-video rounded-lg overflow-hidden card-hover">
               <iframe
                 className="w-full h-full rounded-lg shadow-lg"
-                src={`https://www.youtube.com/embed/${video.videoId}`}
+                src={`https://www.youtube-nocookie.com/embed/${video.videoId}`}
                 title={video.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -227,19 +227,19 @@ export default function Home() {
         <div className="container px-4 mx-auto text-center">
           <h2 className="text-3xl font-bold mb-12">{t.sections.contact.title}</h2>
           <div className="flex justify-center gap-6">
-            <a href="https://github.com/PickleRick9092" className="text-muted-foreground hover:text-primary social-hover">
+            <a href="https://github.com/PickleRick9092" className="text-muted-foreground hover:text-primary social-hover" aria-label="github account">
               <Github className="w-8 h-8 f" />
             </a>
-            <a href="https://www.linkedin.com/in/mohammad-kalateh-46b65a239/" className="text-muted-foreground hover:text-primary social-hover">
+            <a href="https://www.linkedin.com/in/mohammad-kalateh-46b65a239/" className="text-muted-foreground hover:text-primary social-hover" aria-label="linkdin account">
               <Linkedin className="w-8 h-8 text-sky-700" />
             </a>
-            <a href="mailto:mr.math9092@gmail.com" className="text-muted-foreground hover:text-primary social-hover">
+            <a href="mailto:mr.math9092@gmail.com" className="text-muted-foreground hover:text-primary social-hover" aria-label="mail button">
               <Mail className="w-8 h-8 text-rose-600" />
             </a>
-            <a href="https://wa.me/989123903257" className="text-muted-foreground hover:text-primary social-hover">
+            <a href="https://wa.me/989123903257" className="text-muted-foreground hover:text-primary social-hover" aria-label="whatsapp account">
               <MessageCircle className="w-8 h-8 text-emerald-500" />
             </a>
-            <a href="https://t.me/Mohammad9092" className="text-muted-foreground hover:text-primary social-hover">
+            <a href="https://t.me/Mohammad9092" className="text-muted-foreground hover:text-primary social-hover" aria-label="telegram account">
               <Send className="w-8 h-8 text-sky-600" />
             </a>
           </div>

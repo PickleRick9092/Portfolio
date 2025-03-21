@@ -40,14 +40,14 @@ export const projecttranslations = {
         title: "ContactorFix - Electrical Contactor Repair for Industrial Facilities",
         description:
           "A WordPress-based website offering electrical contactor repair services for various industries",
-        image: "https://github.com/PickleRick9092/Site/blob/main/contactorfix.png?raw=true",
+        image: "https://raw.githubusercontent.com/PickleRick9092/Site/refs/heads/main/contactorfix.webp",
         link: "https://contactorfix.ir/",
       },
       {
         title: "FarzinShop - Skincare Products E-commerce Store",
         description:
           "SEO management for FarzinShop to improve visibility and rankings on search engines",
-        image: "https://github.com/PickleRick9092/Site/blob/main/farzinshop.png?raw=true",
+        image: "https://raw.githubusercontent.com/PickleRick9092/Site/refs/heads/main/farzinshop.webp",
         link: "https://farzinonlineshop.ir/",
       },
       {
@@ -118,14 +118,14 @@ export const projecttranslations = {
         title: "ContactorFix - Riparazione di contattori elettrici per strutture industriali",
         description:
           "Un sito WordPress che offre servizi di riparazione di contattori elettrici per diverse industrie",
-        image: "https://github.com/PickleRick9092/Site/blob/main/contactorfix.png?raw=true",
+        image: "https://raw.githubusercontent.com/PickleRick9092/Site/refs/heads/main/contactorfix.webp",
         link: "https://contactorfix.ir/",
       },
       {
         title: "FarzinShop - Negozio online di prodotti per la cura della pelle",
         description:
           "Gestione SEO per FarzinShop per migliorare la visibilità e il posizionamento sui motori di ricerca",
-        image: "https://github.com/PickleRick9092/Site/blob/main/farzinshop.png?raw=true",
+        image: "https://raw.githubusercontent.com/PickleRick9092/Site/refs/heads/main/farzinshop.webp",
         link: "https://farzinonlineshop.ir/",
       },
       {
@@ -194,13 +194,13 @@ export const projecttranslations = {
         {
           title: "کنتاکتور فیکس ",
           description: "یه سایت وردپرسی برای ارائه خدمات تخصصی تعمیر کنتاکتورهای برق در کارخانجات و صنایع مختلف.!",
-          image: "https://github.com/PickleRick9092/Site/blob/main/contactorfix.png?raw=true",
+          image: "https://raw.githubusercontent.com/PickleRick9092/Site/refs/heads/main/contactorfix.webp",
           link: "https://contactorfix.ir/",
         },
         {
           title: " فرزین شاپ",
           description: "سئو سایت فرزین شاپ برای بهبود دیده شدن و رتبه‌بندی بهتر در موتورهای جستجو",
-          image: "https://github.com/PickleRick9092/Site/blob/main/farzinshop.png?raw=true",
+          image: "https://raw.githubusercontent.com/PickleRick9092/Site/refs/heads/main/farzinshop.webp",
           link: "https://farzinonlineshop.ir/",
         },
         {

@@ -26,6 +26,7 @@ export function Navbar({ language, setLanguage }: { language: 'en' | 'fa' | 'it'
             
             <Button
               variant="ghost"
+              aria-label="dark mode"
               size="icon"
               className="btn-bounce"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -37,6 +38,7 @@ export function Navbar({ language, setLanguage }: { language: 'en' | 'fa' | 'it'
 
             <Button
   variant="ghost"
+  aria-label="change language"
   size="icon"
   className="btn-bounce"
   onClick={() => {
@@ -59,6 +61,7 @@ export function Navbar({ language, setLanguage }: { language: 'en' | 'fa' | 'it'
           <div className="flex md:hidden items-center gap-2">
             <Button
               variant="ghost"
+              aria-label="dark mode"
               size="icon"
               className="btn-bounce"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -69,6 +72,7 @@ export function Navbar({ language, setLanguage }: { language: 'en' | 'fa' | 'it'
 
             <Button
               variant="ghost"
+              aria-label="change language"
               size="icon"
               className="btn-bounce"
               onClick={() => {
@@ -87,6 +91,7 @@ export function Navbar({ language, setLanguage }: { language: 'en' | 'fa' | 'it'
 
             <Button
               variant="ghost"
+              aria-label="Open menu"
               size="icon"
               className="btn-bounce"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
