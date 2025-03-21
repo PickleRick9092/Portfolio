@@ -71,10 +71,10 @@ export default function Home() {
 
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4  center-items">
-              <Button variant="default" size="lg" className="btn-bounce" aria-label="project section">
+              <Button variant="default" size="lg" className="btn-bounce  px-4 py-2 bg-indigo-500 text-white rounded-lg shadow-md hover:bg-indigo-600 transition " aria-label="project section">
                 <a href="#projects" className="cta-text">{t.hero.cta.projects}</a>
               </Button>
-              <Button variant="default" size="lg" className="btn-bounce" aria-label="contact section">
+              <Button variant="default" size="lg" className="btn-bounce min-w-11 min-h-11 px-4 py-2 bg-indigo-500 text-white rounded-lg shadow-md hover:bg-indigo-600 transition " aria-label="contact section">
                 <a href="#contact" className="cta-text">{t.hero.cta.contact}</a>
               </Button>
             </div>
