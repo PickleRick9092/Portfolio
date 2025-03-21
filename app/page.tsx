@@ -174,7 +174,7 @@ export default function Home() {
     </div>
     <div className="flex justify-center">
     <Button variant="default" size="lg" className="btn-bounce mt-10  p-4 rounded-lg">
-                <a href="/projects" className="cta-text">مشاهده تمام پروژه ها</a>
+                <a href="/projects" className="cta-text">{t.sections.projects.viewallprojects}</a>
               </Button>
 </div>
 

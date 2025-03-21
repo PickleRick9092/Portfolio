@@ -20,6 +20,7 @@ export const translations = {
       projects: {
         title: "Featured Projects",
         viewProject: "View Project",
+        viewallprojects : "View All Projcets",
       },
       skills: {
         title: "Skills & Expertise",
@@ -136,6 +137,7 @@ export const translations = {
       projects: {
         title: "Progetti in Evidenza",
         viewProject: "Visualizza Progetto",
+        viewallprojects : "Visualizza tutti i progetti",
       },
       skills: {
         title: "Competenze e Specializzazioni",
@@ -248,6 +250,7 @@ export const translations = {
       projects: {
         title: "پروژه ها",
         viewProject: "مشاهده پروژه",
+        viewallprojects : "مشاهده تمام پروژه ها",
       },
       skills: {
         title: "مهارت ها و تخصص ها",
