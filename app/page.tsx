@@ -138,6 +138,7 @@ export default function Home() {
 {/* Projects Section */}
 <section id="projects" className="py-20 bg-muted/30 section-transition">
   <div className="container px-4 mx-auto">
+
     <h2 className="text-3xl font-bold text-center mb-12">{t.sections.projects.title}</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {t.projects.map((project, index) => (
@@ -171,6 +172,12 @@ export default function Home() {
         </motion.div>
       ))}
     </div>
+    <div className="flex justify-center">
+    <Button variant="default" size="lg" className="btn-bounce mt-10  p-4 rounded-lg">
+                <a href="/projects" className="cta-text">مشاهده تمام پروژه ها</a>
+              </Button>
+</div>
+
   </div>
 </section>
 
