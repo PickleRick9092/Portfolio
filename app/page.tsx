@@ -80,9 +80,9 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isVisible ? 1 : 0 }}
+            transition={{ duration: 0.5 }}
             className="relative aspect-square rounded-full overflow-hidden border-4 border-primary/20"
           >
             <Image
@@ -90,7 +90,8 @@ export default function Home() {
   alt={t.hero.title}
   width={350} // عرض تصویر
   height={350} // ارتفاع تصویر
-  priority={true} // برای لود سریع‌تر تصویر
+  priority // برای لود سریع‌تر تصویر
+
    className="w-full h-full object-cover "
 />
 
