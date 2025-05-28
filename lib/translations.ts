@@ -33,7 +33,8 @@ export const translations = {
       },
       linkedin: {
         title: "Latest LinkedIn Posts",
-        viewPost: "View Post"
+        viewPost: "View Post",
+        viewAllPosts: "View All Posts"
       },
     },
     
@@ -173,7 +174,8 @@ export const translations = {
       },
       linkedin: {
         title: "Ultimi post su LinkedIn",
-        viewPost: "Visualizza il post"
+        viewPost: "Visualizza il post",
+        viewAllPosts: "Visualizza tutti i post"
       },
     },
     skills: [ 
@@ -311,7 +313,8 @@ export const translations = {
       },
       linkedin: {
         title: "آخرین پست های لینکدین",
-        viewPost: "مشاهده پست"
+        viewPost: "مشاهده پست",
+        viewAllPosts: "مشاهده همه پست ها"
       },
     },
     

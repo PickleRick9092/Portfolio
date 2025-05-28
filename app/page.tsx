@@ -221,6 +221,11 @@ export default function Home() {
       ))}
     </div>
   </div>
+  <div className="flex justify-center">
+    <Button variant="default" size="lg" className="btn-bounce mt-10  p-4 rounded-lg" aria-label="view all posts">
+                <a href="https://www.linkedin.com/in/mohammad-kalateh-46b65a239/" className="cta-text">{t.sections.linkedin.viewAllPosts}</a>
+              </Button>
+</div>
 </section>
 
 
