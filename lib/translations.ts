@@ -31,6 +31,10 @@ export const translations = {
       contact: {
         title: "Let's Connect",
       },
+      linkedin: {
+        title: "Latest LinkedIn Posts",
+        viewPost: "View Post"
+      },
     },
     
     skills: [ 
@@ -65,7 +69,26 @@ export const translations = {
         icon: "⚙️"
       }
   ],
-  
+  linkedinPosts: [
+    {
+      title: "Behind the Mask of Search",
+      description: "What do people really search for? Let’s dive into human intent and curiosity",
+      image: "https://github.com/PickleRick9092/Site/blob/main/seo.png?raw=true",
+      link: "https://www.linkedin.com/posts/mohammad-kalateh-46b65a239_%D9%BE%D8%B4%D8%AA-%D9%86%D9%82%D8%A7%D8%A8-%D8%B3%D8%B1%DA%86-activity-7329752900472086528-wL-E?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtc8xMBqLJIKOL8mmgqUO7_dD4IrcJDoyU",
+    },
+    {
+      title: "SEO Is Philosophy in Disguise",
+      description: "SEO isn’t just numbers—it’s a mindset. See how philosophy and search connect",
+      image: "https://github.com/PickleRick9092/Site/blob/main/concept.png?raw=true",
+      link: "https://www.linkedin.com/posts/mohammad-kalateh-46b65a239_why-seo-is-philosophy-in-disguise-activity-7325828998276542465-NF7m?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtc8xMBqLJIKOL8mmgqUO7_dD4IrcJDoyU",
+    },
+    {
+      title: "The Hidden Power of 410 Status Code",
+      description: "Learn why using 410 instead of 404 could help your SEO more than you think",
+      image: "https://github.com/PickleRick9092/Site/blob/main/410.png?raw=true",
+      link: "https://www.linkedin.com/posts/mohammad-kalateh-46b65a239_410-gone-status-code-guide-activity-7324690987715354625-NZBb?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtc8xMBqLJIKOL8mmgqUO7_dD4IrcJDoyU",
+    },
+  ],
 
 
     projects: [
@@ -148,6 +171,10 @@ export const translations = {
       contact: {
         title: "Connettiamoci",
       },
+      linkedin: {
+        title: "Ultimi post su LinkedIn",
+        viewPost: "Visualizza il post"
+      },
     },
     skills: [ 
       {
@@ -181,6 +208,27 @@ export const translations = {
         icon: "⚙️"
       }
   ],
+  linkedinPosts: [
+    {
+      title: "Dietro la maschera del Search",
+      description: "Cosa cerchiamo davvero online? Un viaggio nella mente e nell’intenzione umana",
+      image: "https://github.com/PickleRick9092/Site/blob/main/seo.png?raw=true",
+      link: "https://www.linkedin.com/posts/mohammad-kalateh-46b65a239_%D9%BE%D8%B4%D8%AA-%D9%86%D9%82%D8%A7%D8%A8-%D8%B3%D8%B1%DA%86-activity-7329752900472086528-wL-E?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtc8xMBqLJIKOL8mmgqUO7_dD4IrcJDoyU",
+    },
+    {
+      title: " La SEO è filosofia travestita",
+      description: "La SEO non è solo tecnica: è una visione. Scopri il legame con la filosofia",
+      image: "https://github.com/PickleRick9092/Site/blob/main/concept.png?raw=true",
+      link: "https://www.linkedin.com/posts/mohammad-kalateh-46b65a239_why-seo-is-philosophy-in-disguise-activity-7325828998276542465-NF7m?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtc8xMBqLJIKOL8mmgqUO7_dD4IrcJDoyU",
+    },
+    {
+      title: "Il potere nascosto del codice 410",
+      description: "Scopri perché 410 è meglio di 404 per la tua strategia SEO",
+      image: "https://github.com/PickleRick9092/Site/blob/main/410.png?raw=true",
+      link: "https://www.linkedin.com/posts/mohammad-kalateh-46b65a239_410-gone-status-code-guide-activity-7324690987715354625-NZBb?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtc8xMBqLJIKOL8mmgqUO7_dD4IrcJDoyU",
+    },
+  ],
+
     projects: [
       {
         title: "Mehrdad Shop - Negozio E-commerce per Accessori Audio e Visivi per Auto",
@@ -261,6 +309,10 @@ export const translations = {
       contact: {
         title: "ارتباط با من",
       },
+      linkedin: {
+        title: "آخرین پست های لینکدین",
+        viewPost: "مشاهده پست"
+      },
     },
     
     skills: [ 
@@ -297,6 +349,27 @@ export const translations = {
       
   ],
   
+  linkedinPosts: [
+    {
+      title: "پشت نقاب سرچ",
+      description: "توی این پست می‌ریم پشت پرده سرچ و ذهن آدم‌ها رو واکاوی می‌کنیم.",
+      image: "https://github.com/PickleRick9092/Site/blob/main/seo.png?raw=true",
+      link: "https://www.linkedin.com/posts/mohammad-kalateh-46b65a239_%D9%BE%D8%B4%D8%AA-%D9%86%D9%82%D8%A7%D8%A8-%D8%B3%D8%B1%DA%86-activity-7329752900472086528-wL-E?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtc8xMBqLJIKOL8mmgqUO7_dD4IrcJDoyU",
+    },
+    {
+      title: "سئو در لباس فلسفه :)",
+      description: "سئو فقط دیتا نیست، یه ذهنیته. این پست یه دید تازه نسبت به سئو بهت می‌ده.",
+      image: "https://github.com/PickleRick9092/Site/blob/main/concept.png?raw=true",
+      link: "https://www.linkedin.com/posts/mohammad-kalateh-46b65a239_why-seo-is-philosophy-in-disguise-activity-7325828998276542465-NF7m?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtc8xMBqLJIKOL8mmgqUO7_dD4IrcJDoyU",
+    },
+    {
+      title: "کد 410 در سئو",
+      description: "چرا بهتره صفحات حذف‌شده رو با 410 نشون بدیم نه 404؟ این پست بهت می‌گه چرا!",
+      image: "https://github.com/PickleRick9092/Site/blob/main/410.png?raw=true",
+      link: "https://www.linkedin.com/posts/mohammad-kalateh-46b65a239_410-gone-status-code-guide-activity-7324690987715354625-NZBb?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtc8xMBqLJIKOL8mmgqUO7_dD4IrcJDoyU",
+    },
+  ],
+
 
     projects: [
       

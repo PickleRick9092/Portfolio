@@ -182,6 +182,48 @@ export default function Home() {
   </div>
 </section>
 
+
+<section id="linkedin-posts" className="py-20 section-transition bg-muted/20">
+  <div className="container px-4 mx-auto">
+    <h2 className="text-4xl font-bold text-center mb-12 text-primary drop-shadow-md">{t.sections.linkedin.title}</h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {t.linkedinPosts.map((post, index) => (
+        <motion.a
+          key={index}
+          href={post.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.2 }}
+          viewport={{ once: true }}
+          className="group block rounded-2xl p-4 backdrop-blur-xl bg-white/10 border border-white/20 shadow-inner shadow-white/10 hover:shadow-xl hover:shadow-primary/30 transition-all duration-500"
+        >
+<div className="relative w-full">
+  <img
+    src={post.image}
+    alt={post.title}
+    className="object-contain w-full max-h-96 mx-auto transition-transform duration-500"
+  />
+</div>
+
+
+<div className="space-y-3 px-2  mt-8 text-center">
+  <h3 className="text-xl font-semibold mb-2 ">{post.title}</h3>
+  <p className="text-muted-foreground text-xl mb-4">{post.description}</p>
+  <span className="inline-flex items-center justify-center text-sky-700 hover:text-sky-400 font-medium mt-2">
+    {t.sections.linkedin.viewPost}
+    <ExternalLink className="ml-2 w-4 h-4" />
+  </span>
+</div>
+        </motion.a>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 {/* Video Section */}
 <section id="videos" className="py-20 bg-muted/30 section-transition relative">
   <div className="container px-4 mx-auto">
